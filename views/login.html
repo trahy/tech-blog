@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>Tech Blog</title>
+</head>
+
+<body>
+    <nav>
+        <div class="d-flex justify-content-center py-3">
+            <div class="w-50 d-flex justify-content-between align-items-center">
+                <!-- left nav -->
+                <div>
+                    <a id="logo" class="nes-btn" href="#">TECH<br>BLOG</a>
+                </div>
+                <!-- right nav -->
+            </div>
+        </div>
+    </nav>
+
+    <div id="directory" class="d-flex justify-content-center mt-3">
+        <div class="w-50">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Login</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
+
+        <div class="d-flex justify-content-between w-50 row">
+
+            <div class="nes-container col-md-5">
+                <h3>Login</h3>
+                <form class="form login-form">
+                    <div class="nes-field mt-3">
+                        <label for="email-login">email</label>
+                        <input type="text" id="email-login" class="nes-input">
+                    </div>
+                    <div class="nes-field mt-3">
+                        <label for="password-login">password</label>
+                        <input type="text" id="password-login" class="nes-input">
+                    </div>
+                    <div class="form-group mt-5">
+                        <button class="nes-btn is-success" type="submit">login</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="nes-container col-md-5">
+                <h3>Signup</h3>
+
+                <form class="form signup-form">
+                    <div class="nes-field mt-3">
+                        <label for="username-signup">username</label>
+                        <input type="text" id="username-signup" class="nes-input">
+                    </div>
+                    <div class="nes-field mt-3">
+                        <label for="email-signup">email</label>
+                        <input type="text" id="email-signup" class="nes-input">
+                    </div>
+                    <div class="nes-field mt-3">
+                        <label for="password-signup">password</label>
+                        <input type="text" id="password-signup" class="nes-input">
+                    </div>
+                    <div class="form-group mt-5">
+                        <button class="nes-btn is-warning" type="submit">signup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
