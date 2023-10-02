@@ -1,0 +1,82 @@
+:root {
+    --bg: rgb(220, 231, 217);
+    --dk: rgb(43, 42, 46);
+    ;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: .1ms;
+
+}
+
+body {
+    background-color: var(--bg);
+}
+
+nav {
+    background-color: var(--dk);
+}
+
+.nes-input, .nes-btn {
+    border-image-repeat: revert;
+}
+
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .cont-nav {
+        width: 90%;
+    }
+
+    .cont-prim {
+        width: 100%;
+    }
+
+    .cont-sec {
+        width: 75%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .cont-nav,
+    .cont-prim {
+        width: 75%;
+    }
+
+    .cont-sec {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .cont-nav,
+    .cont-prim {
+        width: 50%;
+    }
+
+    .cont-sec {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .cont-nav,
+    .cont-prim {
+        width: 50%;
+    }
+
+    .cont-sec {
+        width: 25%;
+    }
+}
