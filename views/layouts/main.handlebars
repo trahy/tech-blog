@@ -20,28 +20,38 @@
                     <a id="logo" class="nes-btn" href="#">TECH<br>BLOG</a>
                 </div>
                 <!-- right nav -->
-                <div id="unlogged">
-                    <a id="loginBtn" class="nes-btn" href="#">LOGIN</a>
-                    <a id="signupBtn" class="nes-btn" href="#">SIGN UP</a>
+                {{#if logged_in}}
+                <div id="loggedOut">
+                    <a id="loginBtn" class="nes-btn" href="#">LOGIN/SIGN UP</a>
                 </div>
-                <div id="logged">
-                    <a id="loginBtn" class="nes-btn" href="#">DASHBOARD</a>
-                    <a id="signupBtn" class="nes-btn" href="#">LOGOUT</a>
+                {{else}}
+                <div id="loggedIn">
+                    <a id="dashBtn" class="nes-btn" href="#">DASHBOARD</a>
+                    <a id="logoutBtn" class="nes-btn" href="#">LOGOUT</a>
                 </div>
+                {{/if}}
             </div>
         </div>
     </nav>
 
-    <div id="directory" class="d-flex justify-content-center mt-2">
+    <div id="directory" class="d-flex justify-content-center mt-3">
         <div class="w-50">
             <div aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active " aria-current="page">Home</li>
+                    {{#if on_homepage}}
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    {{else}}
+                    <li class="breadcrumb-item active" aria-current="page">{{current_page}}</li>
+                    {{/if}}
                 </ol>
             </div>
         </div>
     </div>
 
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/script.js"></script>

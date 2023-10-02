@@ -20,6 +20,12 @@ Comment.init(
       },
     },
 
+    created_at: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
