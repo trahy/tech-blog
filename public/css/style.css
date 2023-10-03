@@ -24,7 +24,7 @@ nav {
     background-color: var(--dk);
 }
 
-.nes-input, .nes-btn {
+.nes-input, .nes-btn, .nes-textarea {
     border-image-repeat: revert;
 }
 
