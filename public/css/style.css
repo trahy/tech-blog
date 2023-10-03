@@ -28,6 +28,10 @@ nav {
     border-image-repeat: revert;
 }
 
+#commentCard {
+    background-color: #fff;
+}
+
 
 /* media queries */
 
