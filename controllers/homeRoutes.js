@@ -71,11 +71,21 @@ router.get('/post/:id', async (req, res) => {
 router.get('/login', (req, res) => {
     // if user is already logged in, redirect request to another route
     if (req.session.logged_in) {
-        res.redirect('/profile');
+        res.redirect('/');
         return;
     }
 
     res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    // if user is already logged in, redirect request to another route
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('signup');
 });
 
 module.exports = router;

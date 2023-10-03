@@ -1,6 +1,6 @@
 :root {
-    --bg: rgb(220, 231, 217);
-    --dk: rgb(43, 42, 46);
+    --bg: #dce7d9;
+    --dk: #212529;
     ;
 
 }
@@ -47,6 +47,7 @@ nav {
 
 @media (min-width: 768px) {
 
+    .nes-container,
     .cont-nav,
     .cont-prim {
         width: 75%;
@@ -59,6 +60,7 @@ nav {
 
 @media (min-width: 1024px) {
 
+    .nes-container,
     .cont-nav,
     .cont-prim {
         width: 50%;
@@ -71,6 +73,7 @@ nav {
 
 @media (min-width: 1440px) {
 
+    .nes-container,
     .cont-nav,
     .cont-prim {
         width: 50%;
