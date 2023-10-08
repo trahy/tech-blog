@@ -21,14 +21,14 @@
                 </div>
                 <!-- right nav -->
                 {{#if logged_in}}
-                <div id="loggedOut">
-                    <a id="loginBtn" class="nes-btn" href="#">SIGN UP</a>
-                    <a id="signupBtn" class="nes-btn" href="#">SIGN UP</a>
-                </div>
-                {{else}}
                 <div id="loggedIn">
                     <a id="dashBtn" class="nes-btn" href="#">DASHBOARD</a>
                     <a id="logoutBtn" class="nes-btn" href="#">LOGOUT</a>
+                </div>
+                {{else}}
+                <div id="loggedOut">
+                    <a id="loginBtn" class="nes-btn" href="#">Login</a>
+                    <a id="signupBtn" class="nes-btn" href="#">SIGN UP</a>
                 </div>
                 {{/if}}
             </div>
@@ -44,7 +44,8 @@
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     {{else}}
                     {{#each view.breadcrumbElements}}
-                    <li class="breadcrumb-item active" aria-current="page"{{action lastObject href=true}}>{{firstObject}}</li>
+                    <li class="breadcrumb-item active" aria-current="page" {{action lastObject href=true}}>
+                        {{firstObject}}</li>
                     {{/each}}
                     {{/if}}
                 </ol>
@@ -53,12 +54,14 @@
     </div>
 
     <main class="container container-fluid mt-5">
-        <!-- Render the sub layout -->
+        <!-- Render the partials -->
         {{{ body }}}
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/script.js"></script>
+
+    <script src="/js/homepage.js"></script>
 </body>
 
 </html>
