@@ -1,0 +1,17 @@
+[
+    {
+        "comment_description": "OMG thank you, I almost forgot!",
+        "post_id": 1,
+        "user_id": 2
+    },
+    {
+        "comment_description": "I will keep this in mind.",
+        "post_id": 3,
+        "user_id": 2
+    },
+    {
+        "comment_description": "I did not know about this!",
+        "post_id": 3,
+        "user_id": 1
+    }
+]

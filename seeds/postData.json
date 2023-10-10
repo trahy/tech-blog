@@ -1,0 +1,17 @@
+[
+    {
+        "post_title": "Remember to save your work!",
+        "content": "A friendly reminder to save your work often. It will prevent you from doing hours of work again.",
+        "user_id": 1
+    },
+    {
+        "post_title": "Did you try turning it on or off?",
+        "post_description": "When in doubt, reboot your device.",
+        "user_id": 2
+    },
+    {
+        "post_title": "DO NOT CHARGE YOUR DEVICES TO 100%",
+        "post_description": "It is recommended that batteries should be kept at charge between 25-85% to extend the longevity.",
+        "user_id": 3
+    }
+]

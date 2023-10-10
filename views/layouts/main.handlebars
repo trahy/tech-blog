@@ -35,24 +35,6 @@
         </div>
     </nav>
 
-    <div id="directory" class="d-flex justify-content-center mt-3">
-        <div class="cont-nav">
-            <div aria-label="breadcrumb">
-                <ol class="breadcrumb">
-
-                    {{#if on_homepage}}
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    {{else}}
-                    {{#each view.breadcrumbElements}}
-                    <li class="breadcrumb-item active" aria-current="page" {{action lastObject href=true}}>
-                        {{firstObject}}</li>
-                    {{/each}}
-                    {{/if}}
-                </ol>
-            </div>
-        </div>
-    </div>
-
     <main class="container container-fluid mt-5">
         <!-- Render the partials -->
         {{{ body }}}
