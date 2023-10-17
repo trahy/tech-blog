@@ -32,34 +32,56 @@ router.get('/', async (req, res) => {
                     attributes: ['username']
                 }
             ],
+            order: [['created_at', 'DESC']], // sorts most recent post
         });
 
         // serialize data for template
-        const post = postData.map((post) => post.get({ plain: true }));
+        const posts = postData.map((post) => post.get({ plain: true }));
         // pass serialized data and session flag into template
         res.render('homepage', {
-            post, loggedIn: req.session.loggedIn
+            posts, logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
+// gets a single post from homepage
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
+            attributes: [
+                'id',
+                'title',
+                'content',
+                'created_at'
+            ],
             include: [
                 {
-                    model: User,
-                    attributes: ['name'],
+                    model: Comment,
+                    attributes: [
+                        'id',
+                        'comment_text',
+                        'post_id',
+                        'user_id',
+                        'created_at'
+                    ],
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
                 },
+                {
+                    model: User,
+                    attributes: ['username']
+                }
             ],
         });
 
-        const post = postData.get({ plain: true });
+        const posts = postData.get({ plain: true });
 
         res.render('post', {
-            ...post,
+            ...posts,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -74,18 +96,11 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-
     res.render('login');
 });
 
-router.get('/signup', (req, res) => {
-    // if user is already logged in, redirect request to another route
-    if (req.session.logged_in) {
-        res.redirect('/');
-        return;
-    }
-
-    res.render('signup');
+router.get("/signup", (req, res) => {
+    res.render("signup");
 });
 
 module.exports = router;
